@@ -82,13 +82,12 @@ function parseHomeTL(hometlobj){
       if(tweet,tweet.content.itemContent.tweet_results.result.core){ // some validation since the entries are so inconsistent
         user = tweet.content.itemContent.tweet_results.result.core.user_results.result //honestly this object is gnarly
         if(user.is_blue_verified && user.profile_image_shape!="Square"){ // use !="Square" to avoid "official"/business accounts
-          console.log(user.legacy.screen_name,user) //should spit out blue check users. 
+          console.log("blocking",user.legacy.screen_name) //should spit out blue check users. 
           block(user.rest_id)
         }
       }
     }
   })
-  console.log("log tl tweet list",tweets) //dump the tweet list for debugging
 }
 
 
@@ -106,5 +105,5 @@ block = (userId) => {
     "method": "POST",
     "mode": "cors",
     "credentials": "include"
-  }).then(console.log);
+  }).then(console.log("Blocked!"));
 }
