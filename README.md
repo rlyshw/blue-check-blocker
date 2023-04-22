@@ -7,3 +7,7 @@ schema/mock will have model json dumps pulled from a live tl object.
 
 quick and dirty front-end method to click all the unblock buttons
 `document.querySelectorAll('[aria-label="Blocked"]').forEach((button)=>button.click())`
+
+if you would like to send me $8 instead:
+paypal.me/rlyshw
+venmo: rlyshw

@@ -13,7 +13,7 @@
     "runAt": "document_start",
     "js": ["content-script.js"]
   }],
-  "permissions": ["storage", "activeTab", "scripting"],
+  "permissions": [ "activeTab", "scripting"],
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
