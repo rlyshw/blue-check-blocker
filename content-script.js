@@ -98,7 +98,6 @@ getBlockedList = (data) => {
 // this is the xhr that kicks off a block
 // I think a lot of these headers are probably required. Need to scrape them off other requests from the XHR hook
 block = (userId) => {
-  console.log(userId)
   fetch("https://twitter.com/i/api/1.1/blocks/create.json", {
     "headers": modHeaders,
     "body": "user_id="+userId,
